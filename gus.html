@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Output</title>
+</head>
+<body>
+<h1>Output Page</h1>
+<ul>
+	<?php if ($result->num_rows > 0) {   
+	while($row = $result->fetch_assoc()) {
+	?>
+	<li>MinValue: <?php echo $row['min_value'] ?></li>
+</ul>
+<?php  }
+} else {
+    echo "0 results";
+} ?>
+</body>
+</html>
+
